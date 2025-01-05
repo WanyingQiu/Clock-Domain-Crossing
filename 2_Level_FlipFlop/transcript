@@ -1,0 +1,261 @@
+# Compile of 2level_ff.sv failed with 1 errors.
+# Compile of tb_2level_ff.sv failed with 3 errors.
+# 2 compiles, 2 failed with 4 errors.
+# Compile of double_ff.sv was successful.
+# Compile of tb_double_ff.sv failed with 2 errors.
+# 2 compiles, 1 failed with 2 errors.
+# Compile of tb_double_ff.sv failed with 2 errors.
+# Compile of double_ff.sv was successful.
+# Compile of tb_double_ff.sv failed with 2 errors.
+# 2 compiles, 1 failed with 2 errors.
+# Compile of double_ff.sv was successful.
+# Compile of tb_double_ff.sv failed with 2 errors.
+# 2 compiles, 1 failed with 2 errors.
+# Compile of double_ff.sv was successful.
+# Compile of tb_double_ff.sv was successful with warnings.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.tb_double_ff
+# vsim -gui work.tb_double_ff 
+# Start time: 12:30:55 on Jan 04,2025
+# Loading sv_std.std
+# Loading work.tb_double_ff
+# Loading work.double_ff
+# ** Warning: (vsim-8311) System Verilog assertions are supported only in Questasim.
+# Compile of double_ff.sv was successful.
+# Compile of tb_double_ff.sv was successful with warnings.
+# 2 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_double_ff
+# Loading work.double_ff
+add wave -position insertpoint  \
+sim:/tb_double_ff/wr_data \
+sim:/tb_double_ff/wr_clk \
+sim:/tb_double_ff/wr_reset \
+sim:/tb_double_ff/rd_clk \
+sim:/tb_double_ff/rd_reset \
+sim:/tb_double_ff/rd_data
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Test1: 1W/1 fast clock cycle & 1R/1 slow clock cycle
+# Break key hit
+# Simulation stop requested.
+# Compile of double_ff.sv was successful.
+# Compile of tb_double_ff.sv was successful with warnings.
+# 2 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_double_ff
+# Loading work.double_ff
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Test1: 1W/1 fast clock cycle & 1R/1 slow clock cycle
+# Break key hit
+# Simulation stop requested.
+restart -f
+run 100
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+run 1000
+run 10000
+run 20000
+# Test1: 1W/1 fast clock cycle & 1R/1 slow clock cycle
+run 50000
+# Compile of double_ff.sv was successful.
+# Compile of tb_double_ff.sv was successful with warnings.
+# 2 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_double_ff
+# Loading work.double_ff
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Test1: 1W/1 fast clock cycle & 1R/1 slow clock cycle
+# Break key hit
+# Break in Module tb_double_ff at C:/Users/miaqi/Documents/job/prep/clock_domain_crossing/2_Level_FlipFlop/tb_double_ff.sv line 23
+# Compile of double_ff.sv was successful.
+# Compile of tb_double_ff.sv was successful with warnings.
+# 2 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_double_ff
+# Loading work.double_ff
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Test1: 1W/1 fast clock cycle & 1R/1 slow clock cycle
+# ** Note: $stop    : C:/Users/miaqi/Documents/job/prep/clock_domain_crossing/2_Level_FlipFlop/tb_double_ff.sv(56)
+#    Time: 960 ns  Iteration: 0  Instance: /tb_double_ff
+# Break in Module tb_double_ff at C:/Users/miaqi/Documents/job/prep/clock_domain_crossing/2_Level_FlipFlop/tb_double_ff.sv line 56
+# Compile of double_ff.sv was successful.
+# Compile of tb_double_ff.sv was successful with warnings.
+# 2 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_double_ff
+# Loading work.double_ff
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Test1: 1W/1 fast clock cycle & 1R/1 slow clock cycle
+# ** Note: $stop    : C:/Users/miaqi/Documents/job/prep/clock_domain_crossing/2_Level_FlipFlop/tb_double_ff.sv(56)
+#    Time: 920 ns  Iteration: 0  Instance: /tb_double_ff
+# Break in Module tb_double_ff at C:/Users/miaqi/Documents/job/prep/clock_domain_crossing/2_Level_FlipFlop/tb_double_ff.sv line 56
+# Compile of double_ff.sv was successful.
+# Compile of tb_double_ff.sv was successful with warnings.
+# 2 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_double_ff
+# Loading work.double_ff
+restart -f
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Test1: 1W/1 fast clock cycle & 1R/1 slow clock cycle
+# ** Note: $stop    : C:/Users/miaqi/Documents/job/prep/clock_domain_crossing/2_Level_FlipFlop/tb_double_ff.sv(57)
+#    Time: 960 ns  Iteration: 0  Instance: /tb_double_ff
+# Break in Module tb_double_ff at C:/Users/miaqi/Documents/job/prep/clock_domain_crossing/2_Level_FlipFlop/tb_double_ff.sv line 57
+# Compile of double_ff.sv was successful.
+# Compile of tb_double_ff.sv was successful with warnings.
+# 2 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_double_ff
+# Loading work.double_ff
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Test1: 1W/1 fast clock cycle & 1R/1 slow clock cycle
+# ** Note: $stop    : C:/Users/miaqi/Documents/job/prep/clock_domain_crossing/2_Level_FlipFlop/tb_double_ff.sv(58)
+#    Time: 960 ns  Iteration: 0  Instance: /tb_double_ff
+# Break in Module tb_double_ff at C:/Users/miaqi/Documents/job/prep/clock_domain_crossing/2_Level_FlipFlop/tb_double_ff.sv line 58
+# Compile of double_ff.sv was successful.
+# Compile of tb_double_ff.sv was successful with warnings.
+# 2 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_double_ff
+# Loading work.double_ff
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Test1: 1W/1 fast clock cycle & 1R/1 slow clock cycle
+# ** Note: $stop    : C:/Users/miaqi/Documents/job/prep/clock_domain_crossing/2_Level_FlipFlop/tb_double_ff.sv(58)
+#    Time: 960 ns  Iteration: 0  Instance: /tb_double_ff
+# Break in Module tb_double_ff at C:/Users/miaqi/Documents/job/prep/clock_domain_crossing/2_Level_FlipFlop/tb_double_ff.sv line 58
+# Compile of double_ff.sv was successful.
+# Compile of tb_double_ff.sv was successful with warnings.
+# 2 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_double_ff
+# Loading work.double_ff
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Test1: 1W/1 fast clock cycle & 1R/1 slow clock cycle
+# ** Note: $stop    : C:/Users/miaqi/Documents/job/prep/clock_domain_crossing/2_Level_FlipFlop/tb_double_ff.sv(58)
+#    Time: 940 ns  Iteration: 0  Instance: /tb_double_ff
+# Break in Module tb_double_ff at C:/Users/miaqi/Documents/job/prep/clock_domain_crossing/2_Level_FlipFlop/tb_double_ff.sv line 58
+# Compile of double_ff.sv was successful.
+# Compile of tb_double_ff.sv was successful with warnings.
+# 2 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_double_ff
+# Loading work.double_ff
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Test1: 1W/1 fast clock cycle & 1R/1 slow clock cycle
+# ** Note: $stop    : C:/Users/miaqi/Documents/job/prep/clock_domain_crossing/2_Level_FlipFlop/tb_double_ff.sv(60)
+#    Time: 940 ns  Iteration: 0  Instance: /tb_double_ff
+# Break in Module tb_double_ff at C:/Users/miaqi/Documents/job/prep/clock_domain_crossing/2_Level_FlipFlop/tb_double_ff.sv line 60
+# Compile of double_ff.sv was successful.
+# Compile of tb_double_ff.sv failed with 1 errors.
+# 2 compiles, 1 failed with 1 error.
+# Compile of double_ff.sv was successful.
+# Compile of tb_double_ff.sv failed with 1 errors.
+# 2 compiles, 1 failed with 1 error.
+# Compile of double_ff.sv was successful.
+# Compile of tb_double_ff.sv failed with 1 errors.
+# 2 compiles, 1 failed with 1 error.
+# Compile of double_ff.sv was successful.
+# Compile of tb_double_ff.sv failed with 1 errors.
+# 2 compiles, 1 failed with 1 error.
+# Compile of double_ff.sv was successful.
+# Compile of tb_double_ff.sv was successful with warnings.
+# 2 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_double_ff
+# Loading work.double_ff
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Test1: 1W/1 fast clock cycle & 1R/1 slow clock cycle
+# ** Note: $stop    : C:/Users/miaqi/Documents/job/prep/clock_domain_crossing/2_Level_FlipFlop/tb_double_ff.sv(64)
+#    Time: 940 ns  Iteration: 0  Instance: /tb_double_ff
+# Break in Module tb_double_ff at C:/Users/miaqi/Documents/job/prep/clock_domain_crossing/2_Level_FlipFlop/tb_double_ff.sv line 64
+# Compile of double_ff.sv was successful.
+# Compile of tb_double_ff.sv was successful with warnings.
+# 2 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_double_ff
+# Loading work.double_ff
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Test1: 1W/1 fast clock cycle & 1R/1 slow clock cycle
+# ** Note: $stop    : C:/Users/miaqi/Documents/job/prep/clock_domain_crossing/2_Level_FlipFlop/tb_double_ff.sv(64)
+#    Time: 940 ns  Iteration: 0  Instance: /tb_double_ff
+# Break in Module tb_double_ff at C:/Users/miaqi/Documents/job/prep/clock_domain_crossing/2_Level_FlipFlop/tb_double_ff.sv line 64
+clear
+# invalid command name "clear"
+clr
+# invalid command name "clr"
+run -all
+# Break key hit
+# Break in Module tb_double_ff at C:/Users/miaqi/Documents/job/prep/clock_domain_crossing/2_Level_FlipFlop/tb_double_ff.sv line 23
+restart -f
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Test1: 1W/1 fast clock cycle & 1R/1 slow clock cycle
+# ** Note: $stop    : C:/Users/miaqi/Documents/job/prep/clock_domain_crossing/2_Level_FlipFlop/tb_double_ff.sv(64)
+#    Time: 940 ns  Iteration: 0  Instance: /tb_double_ff
+# Break in Module tb_double_ff at C:/Users/miaqi/Documents/job/prep/clock_domain_crossing/2_Level_FlipFlop/tb_double_ff.sv line 64
+# Compile of double_ff.sv was successful.
+# Compile of tb_double_ff.sv was successful with warnings.
+# 2 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_double_ff
+# Loading work.double_ff
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Test1: 1W/1 fast clock cycle & 1R/1 slow clock cycle
+# ** Note: $stop    : C:/Users/miaqi/Documents/job/prep/clock_domain_crossing/2_Level_FlipFlop/tb_double_ff.sv(52)
+#    Time: 940 ns  Iteration: 0  Instance: /tb_double_ff
+# Break in Module tb_double_ff at C:/Users/miaqi/Documents/job/prep/clock_domain_crossing/2_Level_FlipFlop/tb_double_ff.sv line 52

@@ -1,0 +1,61 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/miaqi/Documents/job/prep/clock_domain_crossing/Asyn_FIFIO
+vdouble_ff
+Z0 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z1 !s110 1736014420
+!i10b 1
+!s100 U`B0L2JMJ4lZ_7jM1CH;_0
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IU=obdh6NW]9QCMZL8nXYV1
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+S1
+Z4 dC:/Users/miaqi/Documents/job/prep/clock_domain_crossing/2_Level_FlipFlop
+w1736013171
+8C:/Users/miaqi/Documents/job/prep/clock_domain_crossing/2_Level_FlipFlop/double_ff.sv
+FC:/Users/miaqi/Documents/job/prep/clock_domain_crossing/2_Level_FlipFlop/double_ff.sv
+!i122 33
+L0 1 36
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1736014419.000000
+!s107 C:/Users/miaqi/Documents/job/prep/clock_domain_crossing/2_Level_FlipFlop/double_ff.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/miaqi/Documents/job/prep/clock_domain_crossing/2_Level_FlipFlop/double_ff.sv|
+!i113 1
+Z6 o-work work -sv
+Z7 tCvgOpt 0
+vtb_double_ff
+R0
+R1
+!i10b 1
+!s100 IfOHz^BA^dLTZJOhJPlcm0
+R2
+IKc[Y^M:B4U7E<3385AT;41
+R3
+S1
+R4
+w1736014415
+8C:/Users/miaqi/Documents/job/prep/clock_domain_crossing/2_Level_FlipFlop/tb_double_ff.sv
+FC:/Users/miaqi/Documents/job/prep/clock_domain_crossing/2_Level_FlipFlop/tb_double_ff.sv
+!i122 34
+L0 2 53
+R5
+r1
+!s85 0
+31
+!s108 1736014420.000000
+!s107 C:/Users/miaqi/Documents/job/prep/clock_domain_crossing/2_Level_FlipFlop/tb_double_ff.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/miaqi/Documents/job/prep/clock_domain_crossing/2_Level_FlipFlop/tb_double_ff.sv|
+!i113 1
+R6
+R7

@@ -1,0 +1,61 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/miaqi/Documents/protocols/AMBA APB/AMBA-APB-protocol
+vasyn_fifo
+Z0 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z1 !s110 1734466579
+!i10b 1
+!s100 CMYjF6T9Sgi3C2la1I3Bo1
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IeGo9zoOimcgo9OiaSHTG03
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+S1
+Z4 dC:/Users/miaqi/Documents/job/prep/clock_domain_crossing/Asyn_FIFIO
+w1732841045
+8C:/Users/miaqi/Documents/job/prep/clock_domain_crossing/Asyn_FIFIO/asyn_fifo.sv
+FC:/Users/miaqi/Documents/job/prep/clock_domain_crossing/Asyn_FIFIO/asyn_fifo.sv
+!i122 87
+L0 1 87
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1734466578.000000
+!s107 C:/Users/miaqi/Documents/job/prep/clock_domain_crossing/Asyn_FIFIO/asyn_fifo.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/miaqi/Documents/job/prep/clock_domain_crossing/Asyn_FIFIO/asyn_fifo.sv|
+!i113 1
+Z6 o-work work -sv
+Z7 tCvgOpt 0
+vtb_asyn_fifo
+R0
+R1
+!i10b 1
+!s100 hJIGdanLZSem;9G`gicBd2
+R2
+IT6T>48WWQ?:c<BYfBlmOS3
+R3
+S1
+R4
+w1732850333
+8C:/Users/miaqi/Documents/job/prep/clock_domain_crossing/Asyn_FIFIO/tb_asyn_fifo.sv
+FC:/Users/miaqi/Documents/job/prep/clock_domain_crossing/Asyn_FIFIO/tb_asyn_fifo.sv
+!i122 88
+L0 2 105
+R5
+r1
+!s85 0
+31
+!s108 1734466579.000000
+!s107 C:/Users/miaqi/Documents/job/prep/clock_domain_crossing/Asyn_FIFIO/tb_asyn_fifo.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/miaqi/Documents/job/prep/clock_domain_crossing/Asyn_FIFIO/tb_asyn_fifo.sv|
+!i113 1
+R6
+R7
