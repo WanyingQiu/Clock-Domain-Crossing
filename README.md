@@ -23,7 +23,10 @@ Toggle Synchorizations allows pulse signal tranmission from fast to slow clock d
 Toggle Synchorization also has restriction towards the incoming signals's pulse frequency. It has to be greater/equal to twice the period of the destination clock source.
 ![all text](../images/toggle_2ff.png)
 ## Multi bit Data Crossing: Mux Synchoizations
-Mux/DMux Synchoizations is a one-way multi-data tranmission mechasism, it requires data to be hold for a certain amount of time until data valid is reveiced by the other clock domain. The AND gate is not used in some cases.
+Mux/DMux Synchoizations is a one-way multi-data tranmission mechasism, it requires data to be hold for a certain amount of time until data valid is reveiced by the other clock domain. The AND gate is not used in some cases.  Also there is no handshake mechasim to check whether data tranmistted is correct or not.
+MUX/DMUX Synchronization is a one-way, multi-data transmission mechanism where data is held for a specific duration until the receiving clock domain asserts data-valid. Unlike more robust protocols, this method lacks a handshake mechanism to verify the correctness of the transmitted data, which can lead to potential synchronization issues if proper timing constraints are not met.
+
+While logic gates like AND gates are commonly used in synchronization circuits, there are cases where their usage is omitted, depending on the specific design requirements. 
 ![all text](../images/mux.png)
 ## Multi bit Data Crossing: HandShake Synchorization
 The key of the handshake mechanism is to use the utilize the source clock req signal and ack signal from the destination clock. Both req and ack need to maintain stable and went through a Double FF during sampling time to ensure slow clock domain is able to receive req from the fast clock domain, along with the data needed to be sent during this time.

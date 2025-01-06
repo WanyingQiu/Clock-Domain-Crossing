@@ -507,3 +507,45 @@ run -all
 # ** Note: $stop    : C:/Users/miaqi/Documents/job/prep/clock_domain_crossing/Mux_Synchorization/tb_mux_syn.sv(56)
 #    Time: 700 ns  Iteration: 0  Instance: /tb_mux_syn
 # Break in Module tb_mux_syn at C:/Users/miaqi/Documents/job/prep/clock_domain_crossing/Mux_Synchorization/tb_mux_syn.sv line 56
+quit -sim
+# End time: 18:08:23 on Jan 06,2025, Elapsed time: 0:16:30
+# Errors: 0, Warnings: 1
+# reading C:/intelFPGA/20.1/modelsim_ase/win32aloem/../modelsim.ini
+# Loading project handshake
+# Compile of handshake.sv failed with 4 errors.
+# Compile of tb_handshake.sv failed with 2 errors.
+# 2 compiles, 2 failed with 6 errors.
+# Compile of handshake.sv was successful.
+# Compile of tb_handshake.sv failed with 2 errors.
+# 2 compiles, 1 failed with 2 errors.
+# Compile of handshake.sv was successful.
+# Compile of tb_handshake.sv failed with 2 errors.
+# 2 compiles, 1 failed with 2 errors.
+# Compile of handshake.sv was successful.
+# Compile of tb_handshake.sv failed with 1 errors.
+# 2 compiles, 1 failed with 1 error.
+# Compile of handshake.sv was successful.
+# Compile of tb_handshake.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.tb_handshake_syn
+# vsim -gui work.tb_handshake_syn 
+# Start time: 18:13:04 on Jan 06,2025
+# Loading sv_std.std
+# Loading work.tb_handshake_syn
+# Loading work.hadnshake_syn
+add wave -position insertpoint  \
+sim:/tb_handshake_syn/wr_data \
+sim:/tb_handshake_syn/wr_req \
+sim:/tb_handshake_syn/wr_clk \
+sim:/tb_handshake_syn/wr_reset \
+sim:/tb_handshake_syn/rd_ack \
+sim:/tb_handshake_syn/rd_clk \
+sim:/tb_handshake_syn/rd_reset \
+sim:/tb_handshake_syn/rd_data
+run -all
+# ** Note: $stop    : C:/Users/miaqi/Documents/job/prep/clock_domain_crossing/Handshake/tb_handshake.sv(55)
+#    Time: 300 ns  Iteration: 0  Instance: /tb_handshake_syn
+# Break in Module tb_handshake_syn at C:/Users/miaqi/Documents/job/prep/clock_domain_crossing/Handshake/tb_handshake.sv line 55
+# Compile of handshake.sv was successful.
+# Compile of tb_handshake.sv was successful.
+# 2 compiles, 0 failed with no errors.
