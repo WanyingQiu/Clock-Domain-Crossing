@@ -1,4 +1,4 @@
-module togggle_syn
+module toggle_syn
 (
     input logic wr_data,
     input logic wr_clk,
@@ -24,7 +24,7 @@ always_ff @(posedge wr_clk or negedge wr_reset) begin
         wr_data_q <= mux_sel;
     end 
 end 
-
+// assign mux_sel = (wr_data_q ^ wr_data);
 assign rd_data = (wr_data_q2 ^ wr_data_q1) ;
 always_ff @(posedge rd_clk or negedge rd_reset) begin 
     if(!rd_reset) begin 
@@ -33,7 +33,7 @@ always_ff @(posedge rd_clk or negedge rd_reset) begin
         wr_data_q2 <= 0;
     end 
     else begin 
-        wr_data_q0 <= wr_data;
+        wr_data_q0 <= wr_data_q;
         wr_data_q1 <= wr_data_q0;
         wr_data_q2 <= wr_data_q1;
     end 
@@ -42,7 +42,11 @@ end
 always_comb begin 
     if(!wr_reset) 
         mux_sel = 0;
-    else 
-        mux_sel = (wr_data == 1'b1) ? wr_data_q : ~wr_data_q;
+    else begin 
+        if(wr_data == 1'b1)
+            mux_sel = ~wr_data_q;
+        else 
+            mux_sel =  wr_data_q;
+    end 
 end 
 endmodule

@@ -1,6 +1,6 @@
 ` timescale 1ns/1ps
-module tb_pulse_syn ();
-pulse_syn pulse_syn(.*);
+module tb_toggle_syn ();
+toggle_syn pulse_syn(.*);
 logic wr_data;
 logic wr_clk;
 logic wr_reset;
@@ -14,13 +14,13 @@ logic rd_data;
 initial begin
     wr_clk = 1'b1;
     forever begin
-        #20 wr_clk = ~wr_clk;
+        #10 wr_clk = ~wr_clk;
     end 
 end 
 initial begin 
     rd_clk = 1'b1;
     forever begin
-        #10 rd_clk = ~rd_clk;
+        #20 rd_clk = ~rd_clk;
     end 
 end 
 property delay_verif;
@@ -38,17 +38,23 @@ initial begin
     @(negedge rd_clk); rd_reset = 1'b1;
 
     $display("Test1: 1W/1 fast clock cycle & 1R/1 slow clock cycle");
-    for(int i = 0; i < 20; i++)
+    for(int i = 0; i < 3; i++)
 	begin
         @(posedge wr_clk);
-		wr_data = $random;		
+		wr_data = 1;	
+        if(wr_data) begin
+            @(posedge wr_clk);
+            wr_data = ~wr_data;	
+        end 
+        @(posedge wr_clk);
+        @(posedge wr_clk);
         assert property (delay_verif)  
             $display("Passed test");
         else 
             $error("Errod: signal did not match");
 
 	end
-    #100;
+    #500;
     $stop;
 end
 endmodule 
