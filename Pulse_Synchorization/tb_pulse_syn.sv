@@ -9,6 +9,8 @@ logic rd_clk;
 logic rd_reset;
 
 logic rd_data;
+logic rd_data_pos;
+logic rd_data_neg;
 
 //Slow to fast clock
 initial begin
