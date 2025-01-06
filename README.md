@@ -11,13 +11,15 @@ It is recommendated to stretch for at least 2 cycles by using double DFF, sampli
 This is not useful for fast to slow clock domain, as input signal needs to be stable for more than one synchorizontion clock period. Also we need to make sure the faster clock is >1.5x frequenct of the slow clock.
 ![all text](../images/2ff.png)
 ### Pulse Synchorizations 
-Pulse Synchorization works better for slow to fast clock domain, while incoming pulse width has to be greater than the sum of synchorization and first DFF trigger time, with at least twice the synchorization period. 
-Due to this, This pulse Synchorizations is limited to frequently changing pulse if it's transferred from fast to slow domain, in such cases some signals might not be sampled by the slow clock domain. 
+Pulse synchronization is generally more effective when transferring signals from a slow clock domain to a fast clock domain due to the following reasons:
+<br />The incoming pulse width must be greater than the combined duration of the synchronization delay and the time required for the first flip-flop (DFF) to trigger.
+<br />The pulse must remain stable for at least twice the synchronization period to ensure reliable sampling.
+When transferring pulses from a fast clock domain to a slow clock domain, the slower clock may not sample every pulse due to its lower frequency.  This limitation becomes significant when the pulse signal changes frequently. The slower clock might "miss" pulses if they occur between its sampling edges.
 ![all text](../images/edge-2ff.png)
 
 ## Single bit Data Crossing: Fast to Slow Clock Domain:
 ### Toggle Synchorization
-Toggle Synchorizations allows data tranmission from fast to slow clock domain.  
+Toggle Synchorizations allows pulse signal tranmission from fast to slow clock domain.  
 Toggle Synchorization also has restriction towards the incoming signals's pulse frequency. It has to be greater/equal to twice the period of the destination clock source.
 ![all text](../images/toggle_2ff.png)
 ## Multi bit Data Crossing: Mux Synchoizations
