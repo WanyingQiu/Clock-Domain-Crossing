@@ -7,20 +7,21 @@ Circuits having asychoronous clocks signals can have issues of metastibility whe
 
 ## Single bit Data Crossing: Slow to Fast Clock Domain:
 ### Double Flip Flop Synchorizations
-It is recommendated to stretch for at least 2 cycles by using double DFF, sampling the input signal with the desitnation clock source. Typically the inputting singal coming from clock domain 1 is registered to get rid of glitches(due to combincational circuit), DFF 2 and 3 controlled by the desitnation clock source are aim to prevent metastability.  
-This is not useful for fast to slow clock domain, as input signal needs to be stable for more than one synchorizontion clock period. Also we need to make sure the faster clock is >1.5x frequenct of the slow clock.
+It is recommendated to stretch for at least 2 cycles by using double DFF, sampling the input signal with the desitnation clock source. The input signal from Clock Domain 1 (source) is typically registered first using a D flip-flop to eliminate any glitches caused by combinational circuits. This ensures the signal is clean before synchronization. DFF 2 and 3 controlled by the desitnation clock source are aim to prevent metastability.  
+This is not practically useful for fast to slow clock domain, as the input signal needs to remain stable for more than one synchronization clock period. If not, the destination domain may miss changes in the signal. The faster clock must typically be at least 1.5x the frequency of the slower clock to ensure proper synchronization.
 ![all text](../images/2ff.png)
 ### Pulse Synchorizations 
-Pulse synchronization is generally more effective when transferring signals from a slow clock domain to a fast clock domain due to the following reasons:
-<br />The incoming pulse width must be greater than the combined duration of the synchronization delay and the time required for the first flip-flop (DFF) to trigger.
-<br />The pulse must remain stable for at least twice the synchronization period to ensure reliable sampling.
-When transferring pulses from a fast clock domain to a slow clock domain, the slower clock may not sample every pulse due to its lower frequency.  This limitation becomes significant when the pulse signal changes frequently. The slower clock might "miss" pulses if they occur between its sampling edges.
+Pulse synchronization is generally more effective when transferring **pulse** signals from a slow clock domain to a fast clock domain with the following constraints:
+<br />The pulse width in the source clock domain must exceed both the synchronization delay caused by metastability resolution and the time required for the first flip-flop (DFF) in the destination domain to register the signal.
+<br />The pulse must remain stable for at least twice the synchronization period to ensure reliable sampling by the destination clock domain.
+A fast clock domain can typically sample every pulse, provided the above constraints are met, making this approach well-suited for slow-to-fast clock domain transfers.  But this might not work well with fast to slow domain with the restrictions mentioned above.  
 ![all text](../images/edge-2ff.png)
 
 ## Single bit Data Crossing: Fast to Slow Clock Domain:
 ### Toggle Synchorization
-Toggle Synchorizations allows pulse signal tranmission from fast to slow clock domain.  
-Toggle Synchorization also has restriction towards the incoming signals's pulse frequency. It has to be greater/equal to twice the period of the destination clock source.
+Toggle synchronization is a technique used to reliably transfer pulse signals from a fast clock domain to a slow clock domain. 
+
+Toggle Synchorization also has restriction towards the incoming signals's pulse frequency. The incoming pulse frequency must be greater than or equal to twice the period of the destination clock.
 ![all text](../images/toggle_2ff.png)
 ## Multi bit Data Crossing: Mux Synchoizations
 Mux/DMux Synchoizations is a one-way multi-data tranmission mechasism, it requires data to be hold for a certain amount of time until data valid is reveiced by the other clock domain. The AND gate is not used in some cases.  Also there is no handshake mechasim to check whether data tranmistted is correct or not.
@@ -29,14 +30,16 @@ MUX/DMUX Synchronization is a one-way, multi-data transmission mechanism where d
 While logic gates like AND gates are commonly used in synchronization circuits, there are cases where their usage is omitted, depending on the specific design requirements. 
 ![all text](../images/mux.png)
 ## Multi bit Data Crossing: HandShake Synchorization
-The key of the handshake mechanism is to use the utilize the source clock req signal and ack signal from the destination clock. Both req and ack need to maintain stable and went through a Double FF during sampling time to ensure slow clock domain is able to receive req from the fast clock domain, along with the data needed to be sent during this time.
-This mechasim is inefficient as each data transistance needs multiple clock period to communicate.  It is more frequently to use in small amount of multi-bit data transaction.
+The handshake mechanism is a bidirectional communication protocol used for synchronizing data transfer between clock domains. It relies on req from source domain and ack signal from destination domain.
+
+The handshake mechanism is inherently slow because it requires multiple clock cycles(time it takes for req signal to propogate to destination and ack signal sent back to source clock domain) to complete a single data transfer. This is especially true when there is a significant frequency difference between the source and destination clock domains.  Due to its inefficiency, this mechanism is typically reserved for small amounts of multi-bit data transfer, where reliability and synchronization are more critical than throughput.
+
 ![all text](../images/handshake.png)
 ## Multi bit Data Crossing: FIFO Synchorizations 
-For multiple data transferring, a FIFO is the more common way for data communication between clock domains. 
+For throughput-intensive multiple data transferring, a FIFO is the more common way for data communication between clock domains. 
 ![all text](../images/asyn_fifo.png)
 ### Gray Encoder/Decoder 
-Before transferring, data are converted into gray code.  The Gray code counter ensures 1-bit transition occurs whiles the other remains the same for each data transferring.  This is a protection to setup or hold time violation: at most one bit is being metastable at the source/destination clock edge, and to prevent FIFO reading when it's empty, FIFO writing when it is full. 
+As the data is converted into Gray code before being transferred across the clock domain, only one bit of the data changes between consecutive values. This reduces the risk of synchronization issues, ensuring that only one bit might be metastable at any given time.  Additionally, it safeguards against issues like empty FIFO reads and full FIFO writes, making it an important technique in handling asynchronous data transfer with greater integrity.
 ### FIFO(2Port RAM)
 For a FIFO with 2^n entry, we need n+1 depth to represnt the single address bit and gray code.
 ```Verilog
